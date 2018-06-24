@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2018-6-23 15:26:07 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="com.mycom.ssh.entities.Student" table="SSH_STUDENT">
+        <id name="id" type="java.lang.Integer">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="name" type="java.lang.String">
+            <column name="NAME" />
+        </property>
+        <property name="gender" type="java.lang.String">
+            <column name="GENDER" />
+        </property>
+        <property name="email" type="java.lang.String">
+            <column name="EMAIL" />
+        </property>
+        <property name="phone" type="java.lang.String">
+            <column name="PHONE" />
+        </property>
+        <property name="regTime" type="java.sql.Date">
+            <column name="REG_TIME" />
+        </property>
+        <many-to-one name="major" class="com.mycom.ssh.entities.Major" fetch="join">
+            <column name="MAJOR_ID" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
