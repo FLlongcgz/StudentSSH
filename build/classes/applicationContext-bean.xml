@@ -14,4 +14,6 @@
 	<bean id="majorService"  class="com.mycom.ssh.service.MajorService">
 		<property name="majorDao" ref="majorDao"></property>
 	</bean>
-</beans>
+	<bean id="studentAction" class="com.mycom.ssh.action.StudentAction"  scope="prototype">
+	</bean>
+</beans> 
