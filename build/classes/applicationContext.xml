@@ -33,6 +33,15 @@
 		<property name="sessionFactory" ref="sessionFactory"></property>	
 	</bean>
 	<!-- 配置事务属性 -->
-	
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+		<tx:attributes>
+			<tx:method name="get" read-only="true"/>
+			<tx:method name="*"/>
+		</tx:attributes>
+	</tx:advice>
 	<!-- 配置事务切入点，把事务属性跟事务切入点关联起来 -->
+	<aop:config>
+		<aop:pointcut expression="execution(* com.mycom.ssh.service.*.*(..))" id="txPointcut"/>
+		<aop:advisor advice-ref="txAdvice"  pointcut-ref="txPointcut"/>
+	</aop:config>
 </beans>

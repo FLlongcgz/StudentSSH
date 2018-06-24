@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="studentDao" class="com.mycom.ssh.dao.StudentDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="majorDao" class="com.mycom.ssh.dao.MajorDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="studentService"  class="com.mycom.ssh.service.StudentService">
+		<property name="studentDao" ref="studentDao"></property>
+	</bean>
+	<bean id="majorService"  class="com.mycom.ssh.service.MajorService">
+		<property name="majorDao" ref="majorDao"></property>
+	</bean>
+</beans>
