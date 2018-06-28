@@ -10,6 +10,8 @@
 	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
 	<!--添加包 -->
 	<package name="default"  namespace="/" extends="struts-default">
-		<action name="stu-*" class="studentAction" method="{1}"></action>
+		<action name="stu-*" class="StudentAction" method="{1}">
+			<result name="list">/WEB-INF/views/stu-list.jsp</result>
+		</action>
 	</package>  
 </struts>  
