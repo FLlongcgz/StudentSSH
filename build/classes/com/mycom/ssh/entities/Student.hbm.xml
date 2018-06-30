@@ -20,8 +20,11 @@
         <property name="phone" type="java.lang.String">
             <column name="PHONE" />
         </property>
-        <property name="regTime" type="java.sql.Date">
+        <property name="regTime" type="java.util.Date">
             <column name="REG_TIME" />
+        </property>
+         <property name="birth" type="java.util.Date">
+            <column name="BIRTH" />
         </property>
         <many-to-one name="major" class="com.mycom.ssh.entities.Major" fetch="join">
             <column name="MAJOR_ID" />

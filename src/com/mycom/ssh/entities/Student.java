@@ -1,6 +1,6 @@
 package com.mycom.ssh.entities;
 
-import java.sql.Date;
+import java.util.Date;
 
 public class Student
 {
@@ -8,26 +8,16 @@ public class Student
 	private String name;
 	private String gender;
 	private String email;
-	public Student()
-	{
-		super();
-	}
-	public Student(Integer id, String name, String gender, String email, String phone, Date regTime, Major major)
-	{
-		super();
-		this.id = id;
-		this.name = name;
-		this.gender = gender;
-		this.email = email;
-		this.phone = phone;
-		this.regTime = regTime;
-		this.major = major;
-	}
+	private Date birth;
+	private Date regTime;
+	private String phone;
+	private Major major;
+	
 	@Override
 	public String toString()
 	{
-		return "Student [id=" + id + ", name=" + name + ", gender=" + gender + ", email=" + email + ", phone=" + phone
-				+ ", regTime=" + regTime + ", major=" + major + "]";
+		return "Student [id=" + id + ", name=" + name + ", gender=" + gender + ", email=" + email + ", birth=" + birth
+				+ ", regTime=" + regTime + ", phone=" + phone + ", major=" + major + "]";
 	}
 	public Integer getId()
 	{
@@ -61,13 +51,13 @@ public class Student
 	{
 		this.email = email;
 	}
-	public String getPhone()
+	public Date getBirth()
 	{
-		return phone;
+		return birth;
 	}
-	public void setPhone(String phone)
+	public void setBirth(Date birth)
 	{
-		this.phone = phone;
+		this.birth = birth;
 	}
 	public Date getRegTime()
 	{
@@ -77,6 +67,14 @@ public class Student
 	{
 		this.regTime = regTime;
 	}
+	public String getPhone()
+	{
+		return phone;
+	}
+	public void setPhone(String phone)
+	{
+		this.phone = phone;
+	}
 	public Major getMajor()
 	{
 		return major;
@@ -85,7 +83,5 @@ public class Student
 	{
 		this.major = major;
 	}
-	private String phone;
-	private Date regTime;
-	private Major major;
+	
 }

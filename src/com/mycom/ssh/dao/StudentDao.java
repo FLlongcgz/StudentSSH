@@ -1,17 +1,15 @@
 package com.mycom.ssh.dao;
 
 import java.util.List;
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import com.mycom.ssh.entities.*;
-
 
 public class StudentDao extends BaseDao
 {
 	public List<Student> getAll()
 	{
-		String hql="FROM Student s LEFT OUTER JOIN FETHC s.major";
+		String hql="FROM Student s LEFT OUTER JOIN FETCH s.major";// s LEFT OUTER JOIN FETCH s.major
 		return getSession().createQuery(hql).list();
 	}
 	public Student get(Integer id)

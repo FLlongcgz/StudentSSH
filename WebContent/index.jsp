@@ -9,6 +9,6 @@
 <body>
 <a href="stu-list">显示所有学生信息</a>
 <br>
-<a href="stu-input">显示所有学生信息</a>
+<a href="stu-input">添加新的学生</a>
 </body>
 </html>

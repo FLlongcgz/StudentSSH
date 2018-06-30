@@ -24,7 +24,7 @@
 				<td>RegTime</td>
 				<td>Major</td>
 			</tr>
-			<s:iterator value="request.students">
+			<s:iterator value="#request.students">
 				<tr>
 					<td>${id}</td>
 					<td>${name}</td>
@@ -32,7 +32,7 @@
 					<td>${email}</td>
 					<td>${phone}</td>
 					<td>${birth}</td>
-					<td>${regtime}</td>
+					<td>${regTime}</td>
 					<td>${major.majorName}</td>
 				</tr>
 			</s:iterator>
