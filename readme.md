@@ -23,29 +23,3 @@ SSH框架基本操作步骤
 ### 2）删除学生的功能，删除前要给确认提示，删除后要给结果显示（AJAX）
 ### 3）添加学生（检测学生姓名是否已存在）
 ### 4）修改学生信息（检测学生姓名是否可用）
-
-
-
-
-
-private StudentService studentService;
-	private Map<String,Object>request;
-	public StudentService getStudentService()
-	{
-		return studentService;
-	}
-	public void setStudentService(StudentService studentService)
-	{
-		this.studentService = studentService;
-	}
-	public String list()
-	{
-		request.put("student", studentService.getAll());
-		return "list";
-	}
-	@Override
-	public void setRequest(Map<String, Object> arg0)
-	{
-		// TODO Auto-generated method stub
-		this.request=arg0;
-	}

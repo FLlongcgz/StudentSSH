@@ -12,6 +12,12 @@
 	<package name="default"  namespace="/" extends="struts-default">
 		<action name="stu-*" class="studentAction" method="{1}">
 			<result name="list">/WEB-INF/views/stu-list.jsp</result>
+			<result name="success" type="redirect">/stu-list</result>
+			<result name="ajax-success" type="stream">
+				<param name="contentType">text/html</param>
+				<param name="inputName">inputStream</param>
+			</result>
+			<result name="input">/WEB-INF/views/stu-input.jsp</result>
 		</action>
 	</package>  
 </struts>  

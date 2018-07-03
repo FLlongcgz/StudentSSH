@@ -16,5 +16,6 @@
 	</bean>
 	<bean id="studentAction" class="com.mycom.ssh.action.StudentAction"  scope="prototype">
 		<property name="studentService" ref="studentService"></property>
+		<property name="majorService" ref="majorService"></property>
 	</bean>
 </beans> 
